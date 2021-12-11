@@ -1,0 +1,158 @@
+<!--
+    Desenvolvimento Web (ICP-601) 2021/2
+    Prof. Paulo Roma
+    Trabalho: Meu primeiro WebSite
+    Aluno: Gabriel Rodrigues Cunha
+    DRE: 119143696
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turing Machines</title>
+</head>
+
+<body>
+    <a name="top"></a>
+    <h1>Turing Machines</h1>
+    <hr />
+    <div style="float: right; background-color: antiquewhite; width: 10em; margin-left: 2em;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Alan_Turing_Aged_16.jpg"
+            style="width: 90%; align-self: center; margin-left: 5%; margin-top: 5%;">
+        <p style="width: 90%; margin-left: 5%;">Alan Mathison Turing OBE FRS
+            (/ˈtjʊərɪŋ/; 23 June 1912 – 7 June 1954) was an English mathematician,
+            computer scientist, logician, cryptanalyst, philosopher, and theoretical biologist.</p>
+    </div>
+    <div style="min-width: 350px; max-width: 50%;">
+        <article>
+
+            <p>Turing machine is a mathematical model of computation that defines an abstract machine
+                that manipulates symbols on a strip of tape according to a table of rules.
+                Despite the model's simplicity, given any computer algorithm, a Turing machine
+                capable of simulating that algorithm's logic can be constructed.
+                The machine operates on an infinite memory tape divided into discrete "cells".
+                The machine positions its "head" over a cell and "reads" or "scans" the symbol there.
+                Then, based on the symbol and the machine's own present state in a "finite table"
+                of user-specified instructions, the machine first writes a symbol
+                (e.g., a digit or a letter from a finite alphabet) in the cell
+                (some models allow symbol erasure or no writing), then either moves the
+                tape one cell left or right (some models allow no motion, some models move the head),
+                then, based on the observed symbol and the machine's own state in the table,
+                either proceeds to another instruction or halts the computation.</p>
+
+                <img src="https://cyberlaw.stanford.edu/files/blogimages/turingFull560_1.jpg" width="100%" />
+        </article>
+    </div>
+    <hr />
+    <section>
+        <h2>A Turing machine consists of:</h2>
+        <ul>
+            <li>
+                A tape divided into cells, one next to the other. Each cell contains a symbol
+                from some finite alphabet. The alphabet contains a special blank symbol
+                (here written as '0') and one or more other symbols. The tape is assumed
+                to be arbitrarily extendable to the left and to the right, so that the Turing
+                machine is always supplied with as much tape as it needs for its computation.
+            </li>
+            <li>
+                A head that can read and write symbols on the tape and move the
+                tape left and right one (and only one) cell at a time. In some models
+                the head moves and the tape is stationary.
+            </li>
+            <li>
+                A state register that stores the state of the Turing machine,
+                one of finitely many. Among these is the special start state
+                with which the state register is initialized. These states,
+                writes Turing, replace the "state of mind" a person performing
+                computations would ordinarily be in.
+            </li>
+            <li>
+                A finite table of instructions that, given the state(q<sub>i</sub>)
+                the machine is currently in and the symbol(a<sub>j</sub>) it is
+                reading on the tape (symbol currently under the head), tells the machine to do the following in sequence (for the 5-tuple models):
+                <ol>
+                    <li>
+                        Either erase or write a symbol (replacing a<sub>j</sub> with a<sub>j1</sub>).
+                    </li>
+                    <li>
+                        Move the head (which is described by d<sub>k</sub> and can have values:
+                        'L' for one step left or 'R' for one step right or 'N'
+                        for staying in the same place).
+                    </li>
+                    <li>
+                        Assume the same or a new state as prescribed (go to state q<sub>i1</sub>).
+                    </li>
+                </ol>
+            </li>
+    </section>
+    <hr />
+    <section>
+        <h2>Variant models</h2>
+        <table style="border: 1px solid #acacac">
+            <tr>
+                <th style="border: 1px solid #acacac">Name</th>
+                <th style="border: 1px solid #acacac">Description</th>
+                <th style="border: 1px solid #acacac">Publication</th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #acacac">alternating Turing machine (ATM)</td>
+                <td style="border: 1px solid #acacac">A non-deterministic Turing machine (NTM)
+                    with a rule for accepting computations that generalizes the
+                    rules used in the definition of the complexity classes NP and co-NP.</td>
+                <td style="border: 1px solid #acacac">1981</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #acacac">Neural Turing machine (NTM)</td>
+                <td style="border: 1px solid #acacac">A recurrent neural network model of a Turing machine.</td>
+                <td style="border: 1px solid #acacac">2014</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #acacac">Universal Turing machine (UTM)</td>
+                <td style="border: 1px solid #acacac">A Turing machine that simulates
+                    an arbitrary Turing machine on arbitrary input.</td>
+                <td style="border: 1px solid #acacac">1936-1937</td>
+            </tr>
+        </table>
+    </section>
+    <hr />
+    <section>
+        <h2>Videos</h2>
+        <aside>
+            <iframe width="400" height="225" src="https://www.youtube.com/embed/E3keLeMwfHY"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write;
+                encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="400" height="225" src="https://www.youtube.com/embed/dNRDvLACg5Q"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write;
+                encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </aside>
+    </section>
+    <hr />
+    <section>
+        <h2>References</h2>
+        <ul>
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Turing_machine">
+                    Turing machine, Wikipedia, 28/11/2021.
+                </a>
+            </li>
+            <li>
+                <a href="https://en.wikipedia.org/wiki/Alan_Turing">
+                    Alan Turing, Wikipedia, 28/11/2021.
+                </a>
+            </li>
+        </ul>
+    </section>
+    <hr />
+    <section>
+        <form action="#top">
+            <input type="submit" value="Back to top"/>
+        </form>
+    </section>
+</body>
+</html>
