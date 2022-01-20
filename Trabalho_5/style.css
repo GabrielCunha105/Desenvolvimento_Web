@@ -1,0 +1,26 @@
+body {
+    background-color: rgb(211, 205, 116);
+}
+
+div {
+    width:min-content;
+}
+
+h2 {
+    text-align:center;
+    color: darkred;
+}
+
+p {
+    text-align:center;
+    color: darkred;
+}
+
+canvas {
+    border: 5px solid darkred;
+    background-color: antiquewhite;
+}
+
+input {
+    width: 100%;
+}
